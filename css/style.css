@@ -1,0 +1,160 @@
+
+:root {
+    --purple: #7654ac;
+    --teal: #137f87;
+    --blue: #386da5;
+    --ink: #28344b;
+    --light: #f9faff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background-color: var(--light);
+    background-image: url("../images/background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.site-header {
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid rgba(118, 84, 172, 0.15);
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.site-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+    .nav-links a {
+        color: var(--ink);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--teal);
+        }
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75vh;
+    padding: 100px 28px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 680px;
+    padding: 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 12px 40px rgba(56, 70, 110, 0.08);
+}
+
+.eyebrow {
+    color: var(--teal);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+h1 {
+    color: var(--purple);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin: 22px 0;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button-primary {
+    color: white;
+    background: var(--purple);
+}
+
+.button-secondary {
+    color: var(--teal);
+    background: white;
+    border: 2px solid var(--teal);
+}
+
+.button:hover {
+    filter: brightness(0.94);
+}
+
+.site-footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+    .navigation {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        padding: 50px 18px;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
