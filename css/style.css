@@ -277,3 +277,265 @@ h1 {
 .about-section h2 + h3 {
     margin-top: 12px;
 }
+
+/* =========================
+   EXPERIENCE PAGE
+   ========================= */
+
+.experience-page {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 28px 85px;
+}
+
+    .experience-page h2 {
+        color: var(--purple);
+        font-size: 1.9rem;
+        margin-top: 0;
+    }
+
+.experience-title {
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.experience-page p,
+.experience-page li {
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.timeline {
+    position: relative;
+    margin: 30px 0 10px 12px;
+    padding-left: 28px;
+    border-left: 3px solid rgba(19, 127, 135, 0.5);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 35px;
+}
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -38px;
+        top: 8px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: var(--purple);
+        border: 3px solid white;
+        box-shadow: 0 0 0 2px var(--purple);
+    }
+
+.experience-date {
+    color: var(--teal);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.timeline-item h3 {
+    color: var(--purple);
+    font-size: 1.45rem;
+    margin: 0 0 4px;
+}
+
+.experience-company {
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.timeline-item ul {
+    padding-left: 22px;
+}
+
+.timeline-item li {
+    margin-bottom: 10px;
+}
+
+.experience-note {
+    font-size: 0.9rem !important;
+    color: #4c5870;
+    border-top: 1px solid rgba(118, 84, 172, 0.2);
+    padding-top: 15px;
+}
+
+.credential-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.credential-card {
+    background: rgba(245, 246, 255, 0.82);
+    border-left: 4px solid var(--teal);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+    .credential-card h3 {
+        color: var(--teal);
+        margin-top: 0;
+    }
+
+    .credential-card p {
+        margin-bottom: 0;
+    }
+
+.experience-closing {
+    text-align: center;
+}
+
+    .experience-closing p {
+        max-width: 750px;
+        margin: 0 auto 25px;
+    }
+
+@media (max-width: 750px) {
+    .experience-page {
+        padding: 30px 16px;
+    }
+
+    .credential-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Education section headings */
+.credential-heading {
+    color: var(--purple);
+    font-size: 1.4rem;
+    margin: 34px 0 18px;
+}
+
+.experience-page .credential-heading:first-of-type {
+    margin-top: 12px;
+}
+
+.credential-grid {
+    margin-bottom: 12px;
+}
+
+
+/* Expandable career timeline */
+
+/*.career-details summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 8px 35px 12px 0;
+    position: relative;
+}
+
+    .career-details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .career-details summary::after {
+        content: "+";
+        position: absolute;
+        right: 5px;
+        top: 14px;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: var(--teal);
+    }
+
+.career-details[open] summary::after {
+    content: "−";
+}
+
+.career-details summary:hover .career-job-title {
+    color: var(--teal);
+}
+
+.career-details summary:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
+.career-details .experience-date {
+    display: block;
+    margin: 0 0 6px;
+}
+
+.career-job-title {
+    display: block;
+    color: var(--purple);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.career-company {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.career-description {
+    padding-top: 5px;
+}*/
+
+/* Expandable timeline - basic styling test */
+
+.career-details summary {
+    cursor: pointer;
+}
+
+.career-details .experience-date {
+    display: block;
+    color: var(--teal);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.career-job-title {
+    display: block;
+    color: var(--purple);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.career-company {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Expand and collapse indicators */
+
+.career-details summary {
+    position: relative;
+    padding-right: 35px;
+}
+
+    .career-details summary::after {
+        content: "+";
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: var(--teal);
+    }
+
+.career-details[open] summary::after {
+    content: "−";
+}
+/* Hide the browser's default expand/collapse arrow */
+.career-details summary {
+    list-style: none;
+}
+
+    .career-details summary::-webkit-details-marker {
+        display: none;
+    }
