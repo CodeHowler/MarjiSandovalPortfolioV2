@@ -539,3 +539,163 @@ h1 {
     .career-details summary::-webkit-details-marker {
         display: none;
     }
+
+/* =========================
+   PROJECTS PAGE
+   ========================= */
+
+.projects-page {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 28px 85px;
+}
+
+.projects-title {
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.projects-intro p,
+.projects-closing p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 28px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 5px solid var(--teal);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(40, 52, 75, 0.09);
+}
+
+.project-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-category {
+    color: var(--teal);
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.project-status {
+    background: #ede6fa;
+    color: #65469c;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.project-symbol {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-top: 25px;
+    border-radius: 16px;
+    background: #ebe4fb;
+    color: var(--purple);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.project-card h2 {
+    color: var(--purple);
+    font-size: 1.8rem;
+    margin: 18px 0 12px;
+}
+
+.project-card p {
+    line-height: 1.7;
+    font-size: 1.04rem;
+}
+
+.project-skills {
+    color: var(--teal);
+    font-size: 0.92rem !important;
+    font-weight: 600;
+}
+
+.project-details {
+    border-top: 1px solid rgba(118, 84, 172, 0.2);
+    margin-top: 22px;
+    padding-top: 15px;
+}
+
+    .project-details summary {
+        color: var(--purple);
+        cursor: pointer;
+        font-weight: 700;
+        padding: 8px 0;
+    }
+
+        .project-details summary:focus-visible {
+            outline: 2px solid var(--teal);
+            outline-offset: 4px;
+        }
+
+    .project-details h3 {
+        color: var(--teal);
+        font-size: 1.1rem;
+        margin: 22px 0 8px;
+    }
+
+    .project-details p {
+        margin-top: 0;
+    }
+
+.projects-closing {
+    text-align: center;
+}
+
+    .projects-closing h2 {
+        color: var(--purple);
+    }
+
+@media (max-width: 750px) {
+    .projects-page {
+        padding: 30px 16px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 1rem auto 1.5rem;
+    border-radius: 18px;
+}
+.truckerpay-image {
+    max-width: 400px;
+}
+
+.hero-academy-image {
+    max-width: 400px;
+}
+
+.family-history-image {
+    max-width: 400px;
+}
